@@ -7,7 +7,7 @@ import { Navigation } from "@/components/navigation"
 
 export const metadata: Metadata = {
   title: "Habito",
-  description: "A habit tracking app for improving your daily routines.",
+  description: "A habit tracking app for improving your daily routine.",
 }
 
 export default function RootLayout({
