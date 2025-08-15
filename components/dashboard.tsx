@@ -121,11 +121,11 @@ export function Dashboard() {
 
   return (
     <div className="space-y-6 animate-in fade-in-50 duration-500">
-      <div className="text-center space-y-2">
-        <h1 className="text-4xl font-bold bg-gradient-to-r from-primary via-primary/80 to-primary/60 bg-clip-text text-transparent">
+      <div className="text-center space-y-3">
+        <h1 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-primary via-primary/80 to-primary/60 bg-clip-text text-transparent">
           {getGreeting()}!
         </h1>
-        <p className="text-lg text-muted-foreground">{getMotivationalMessage()}</p>
+        <p className="text-base md:text-lg text-muted-foreground">{getMotivationalMessage()}</p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
@@ -150,7 +150,7 @@ export function Dashboard() {
             className="transition-all duration-200 hover:shadow-md hover:scale-105 animate-in slide-in-from-bottom-5"
             style={{ animationDelay: `${index * 100}ms` }}
           >
-            <CardContent className="p-6">
+            <CardContent className="p-6 py-2">
               <div className="flex items-center gap-2">
                 <stat.icon className={`w-5 h-5 ${stat.color}`} />
                 <div>

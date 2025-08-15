@@ -22,6 +22,9 @@ export default function RootLayout({
       <body>
         <Navigation />
         <main>{children}</main>
+        <footer className="text-center text-sm text-muted-foreground py-4">
+          Built with ❤️ by Sudhanshu Ranjan.
+        </footer>
       </body>
     </html>
   )
