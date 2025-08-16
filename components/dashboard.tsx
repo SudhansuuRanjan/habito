@@ -210,7 +210,7 @@ export function Dashboard() {
                 return (
                   <div
                     key={habit.id}
-                    className={`flex items-center justify-between p-4 border rounded-lg transition-all duration-300 hover:shadow-sm animate-in slide-in-from-left-5 ${
+                    className={`flex flex-col md:flex-row gap-4 items-start md:items-center justify-between p-4 border rounded-lg transition-all duration-300 hover:shadow-sm animate-in slide-in-from-left-5 ${
                       isCompleted
                         ? "bg-green-50 border-green-200 dark:bg-green-950 dark:border-green-800"
                         : "hover:bg-accent/50"

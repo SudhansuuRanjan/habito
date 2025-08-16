@@ -82,8 +82,8 @@ export function HabitList() {
     <div className="space-y-6 animate-in fade-in-50 duration-500">
       <div className="flex items-center justify-between">
         <div>
-          <h2 className="text-2xl md:text-3xl font-bold">My Habits</h2>
-          <p className="text-muted-foreground text-sm md:text-base">Build consistency with your daily routines</p>
+          <h2 className="text-3xl font-bold">My Habits</h2>
+          <p className="text-muted-foreground">Build consistency with your daily routines</p>
         </div>
         <Button onClick={() => setShowForm(true)} className="transition-all duration-200 hover:scale-105">
           <Plus className="w-4 h-4 mr-2" />
