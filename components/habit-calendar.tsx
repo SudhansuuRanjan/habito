@@ -220,7 +220,7 @@ export function HabitCalendar() {
       <div className="md:hidden">
         <Card>
           <CardHeader>
-            <div className="flex items-center justify-between">
+            <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center justify-between">
               <CardTitle className="text-xl">Week of {currentWeekStart.toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" })}</CardTitle>
               <div className="flex gap-2">
                 <Button variant="outline" size="sm" onClick={() => navigateWeek("prev")}>
