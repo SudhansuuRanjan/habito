@@ -62,7 +62,7 @@ export function Navigation() {
               href="/"
               className="text-xl font-bold bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent"
             >
-              Habito
+              Habitto
             </Link>
             <div className="hidden md:flex items-center gap-5">
                 {navItems.map((item) => {

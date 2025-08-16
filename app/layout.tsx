@@ -1,14 +1,40 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { GeistSans } from "geist/font/sans"
-import { GeistMono } from "geist/font/mono"
 import "./globals.css"
 import { Navigation } from "@/components/navigation"
 
 export const metadata: Metadata = {
-  title: "Habito",
+  title: "Habitto",
   description: "A habit tracking app for improving your daily routine.",
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+  },
+  openGraph: {
+    title: "Habitto",
+    description: "A habit tracking app for improving your daily routine.",
+    url: "https://habitto.vercel.app", // replace with your real domain
+    siteName: "Habitto",
+    images: [
+      {
+        url: "https://habitto.vercel.app/og-image.jpg", // full URL required for crawlers
+        width: 1200,
+        height: 630,
+        alt: "Habitto - Build better daily habits",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Habitto",
+    description: "A habit tracking app for improving your daily routine.",
+    images: ["https://habitto.vercel.app/og-image.jpg"],
+    creator: "@Sudhanss_u", // optional: your Twitter handle
+  },
 }
+
 
 export default function RootLayout({
   children,
