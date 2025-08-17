@@ -77,7 +77,7 @@ export function Navigation() {
                     className="transition-all duration-200 hover:scale-105"
                   >
                     <Link href={item.href} className="flex items-center gap-2">
-                      <Icon className="w-4 h-4" />
+                      <Icon className="size-4" />
                       {item.label}
                     </Link>
                   </Button>
@@ -92,7 +92,7 @@ export function Navigation() {
                 aria-label="Toggle dark mode"
                 onClick={toggleTheme}
               >
-                {theme === "dark" ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
+                {theme === "dark" ? <Sun className="size-4" /> : <Moon className="size-4" />}
               </Button>
           </div>
 
@@ -100,14 +100,14 @@ export function Navigation() {
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger asChild>
                 <Button variant="ghost" size="sm">
-                  <Menu className="w-5 h-5" />
+                  <Menu className="size-5" />
                 </Button>
               </SheetTrigger>
               <SheetContent side="right" className="w-64">
                 <div className="flex items-center justify-between mb-6">
                   <span className="text-lg font-bold">Menu</span>
                   <Button variant="ghost" size="sm" onClick={() => setIsOpen(false)}>
-                    <X className="w-4 h-4" />
+                    <X className="size-4" />
                   </Button>
                 </div>
                 <div className="space-y-2">
@@ -123,7 +123,7 @@ export function Navigation() {
                         onClick={() => setIsOpen(false)}
                       >
                         <Link href={item.href} className="flex items-center gap-3">
-                          <Icon className="w-5 h-5" />
+                          <Icon className="size-5" />
                           {item.label}
                         </Link>
                       </Button>
@@ -136,7 +136,7 @@ export function Navigation() {
                     aria-label="Toggle dark mode"
                     onClick={() => { toggleTheme(); setIsOpen(false); }}
                   >
-                    {theme === "dark" ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
+                    {theme === "dark" ? <Sun className="size-5" /> : <Moon className="size-5" />}
                     <span className="ml-2">{theme === "dark" ? "Light Mode" : "Dark Mode"}</span>
                   </Button>
                 </div>

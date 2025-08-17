@@ -183,7 +183,7 @@ export function Dashboard() {
           >
             <CardContent className="p-6 py-2">
               <div className="flex items-center gap-2">
-                <stat.icon className={`w-5 h-5 ${stat.color}`} />
+                <stat.icon className={`w-8 h-8 ${stat.color}`} />
                 <div>
                   <p className="text-2xl font-bold">{stat.value}</p>
                   <p className="text-sm text-muted-foreground">{stat.label}</p>
@@ -344,7 +344,7 @@ export function Dashboard() {
             style={{ animationDelay: `${(index + 4) * 100}ms` }}
           >
             <Link href={action.href} className="flex flex-col items-center gap-3">
-              <action.icon className="w-8 h-8" />
+              <action.icon className="size-8" />
               <span className="font-medium">{action.label}</span>
             </Link>
           </Button>

@@ -257,7 +257,7 @@ export function AnalyticsDashboard() {
         <Card>
           <CardContent className="p-6">
             <div className="flex items-center gap-2">
-              <Target className="w-5 h-5 text-blue-500" />
+              <Target className="size-8 text-blue-500" />
               <div>
                 <p className="text-2xl font-bold">{overallStats.totalHabits}</p>
                 <p className="text-sm text-muted-foreground">
@@ -271,7 +271,7 @@ export function AnalyticsDashboard() {
         <Card>
           <CardContent className="p-6">
             <div className="flex items-center gap-2">
-              <Award className="w-5 h-5 text-green-500" />
+              <Award className="size-8 text-green-500" />
               <div>
                 <p className="text-2xl font-bold">{overallStats.totalCompletions}</p>
                 <p className="text-sm text-muted-foreground">Total Completions</p>
@@ -283,7 +283,7 @@ export function AnalyticsDashboard() {
         <Card>
           <CardContent className="p-6">
             <div className="flex items-center gap-2">
-              <TrendingUp className="w-5 h-5 text-purple-500" />
+              <TrendingUp className="size-8 text-purple-500" />
               <div>
                 <p className="text-2xl font-bold">{overallStats.averageCompletion}%</p>
                 <p className="text-sm text-muted-foreground">
@@ -297,7 +297,7 @@ export function AnalyticsDashboard() {
         <Card>
           <CardContent className="p-6">
             <div className="flex items-center gap-2">
-              <Flame className="w-5 h-5 text-orange-500" />
+              <Flame className="size-8 text-orange-500" />
               <div>
                 <p className="text-2xl font-bold">{overallStats.bestStreak}</p>
                 <p className="text-sm text-muted-foreground">
@@ -311,7 +311,7 @@ export function AnalyticsDashboard() {
         <Card>
           <CardContent className="p-6">
             <div className="flex items-center gap-2">
-              <Clock className="w-5 h-5 text-red-500" />
+              <Clock className="size-8 text-red-500" />
               <div>
                 <p className="text-2xl font-bold">{overallStats.activeStreaks}</p>
                 <p className="text-sm text-muted-foreground">
