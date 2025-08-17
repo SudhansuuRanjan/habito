@@ -10,7 +10,6 @@ A modern habit tracking app built with Next.js, React, and Tailwind CSS. Track y
 - Confetti celebration when all habits are completed
 - Dark mode toggle
 - Mobile-friendly design
-- PWA-ready (offline support, installable)
 
 ## Getting Started
 
@@ -40,14 +39,9 @@ app/           # Next.js app directory
 components/    # UI and feature components
 hooks/         # Custom React hooks
 lib/           # Utility and storage logic
-prisma/        # Database schema (if using Prisma)
 public/        # Static assets (favicon, images, manifest)
 styles/        # Global styles
 ```
-
-## PWA Setup
-- Manifest and icons in `public/`
-- PWA config in `next.config.mjs` (see next-pwa docs)
 
 ## Customization
 - Update `app/layout.tsx` for meta tags, favicon, and manifest
