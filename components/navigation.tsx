@@ -88,7 +88,7 @@ export function Navigation() {
             <Button
                 variant="ghost"
                 size="sm"
-                className="ml-2 cursor-pointer"
+                className="ml-2 cursor-pointer border"
                 aria-label="Toggle dark mode"
                 onClick={toggleTheme}
               >

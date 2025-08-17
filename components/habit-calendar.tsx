@@ -326,7 +326,7 @@ export function HabitCalendar() {
                     return (
                       <div
                         key={habit.id}
-                        className={`flex items-center justify-between p-3 border rounded-lg ${isSelectedDateToday ? "cursor-pointer hover:bg-accent/50" : "cursor-default opacity-60"
+                        className={`flex flex-col md:flex-row gap-4 items-start md:items-center justify-between p-3 border rounded-lg ${isSelectedDateToday ? "cursor-pointer hover:bg-accent/50" : "cursor-default opacity-60"
                           }`}
                         onClick={() => {
                           if (isSelectedDateToday) {

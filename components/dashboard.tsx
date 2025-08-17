@@ -9,11 +9,21 @@ import { Check, Clock, Flame, Target, TrendingUp, Plus, Calendar } from "lucide-
 import Link from "next/link"
 import type { Habit, HabitEntry } from "@/lib/types"
 import { getHabits, getEntries, toggleHabitCompletion, getTodayString } from "@/lib/storage"
+import confetti from "canvas-confetti"
 import { getTodaysHabits, calculateHabitStats } from "@/lib/analytics"
 import { EmptyState } from "./empty-state"
 import { LoadingSpinner } from "./loading-spinner"
 
 export function Dashboard() {
+  // ...existing code...
+  // Confetti trigger helper
+  const fireConfetti = () => {
+    confetti({
+      particleCount: 120,
+      spread: 70,
+      origin: { y: 0.8 },
+    })
+  }
   const [habits, setHabits] = useState<Habit[]>([])
   const [entries, setEntries] = useState<HabitEntry[]>([])
   const [todaysHabits, setTodaysHabits] = useState<Habit[]>([])
@@ -32,13 +42,34 @@ export function Dashboard() {
       setEntries(allEntries)
       setTodaysHabits(todayHabits)
       setIsLoading(false)
+
+      // Fire confetti if all habits are completed for today
+      const completed = todayHabits.filter((habit) => {
+        const today = getTodayString()
+        const entry = allEntries.find((e) => e.habitId === habit.id && e.date === today)
+        return entry?.completed ?? false
+      }).length
+      if (todayHabits.length > 0 && completed === todayHabits.length) {
+        fireConfetti()
+      }
     }
     loadData()
   }, [])
 
   const handleHabitToggle = (habitId: string) => {
     toggleHabitCompletion(habitId, getTodayString())
-    setEntries(getEntries())
+    const updatedEntries = getEntries()
+    setEntries(updatedEntries)
+
+    // Check if all habits are now completed
+    const completed = todaysHabits.filter((habit) => {
+      const today = getTodayString()
+      const entry = updatedEntries.find((e) => e.habitId === habit.id && e.date === today)
+      return entry?.completed ?? false
+    }).length
+    if (todaysHabits.length > 0 && completed === todaysHabits.length) {
+      fireConfetti()
+    }
   }
 
   const isHabitCompleted = (habitId: string): boolean => {
